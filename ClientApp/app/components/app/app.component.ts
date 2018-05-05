@@ -57,6 +57,10 @@ export class AppComponent implements OnInit {
     this.appendAQueryParam();
     this.getOffers();
   }
+
+   decodeURI(url) {
+      return decodeURIComponent(url);
+  }
   getOffers() {
 
     this.es.getData(this.model).subscribe(
